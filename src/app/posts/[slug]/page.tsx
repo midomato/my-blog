@@ -5,14 +5,18 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import { getAllPosts } from '@/lib/posts'
-import type { PageProps } from 'next'  // ✅ ← 型補強で型ミス防止
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
   return posts.map((post) => ({ slug: post.slug }))
 }
 
-export default async function PostPage({ params }: PageProps<{ slug: string }>) {
+// 👇 propsの型を手動で定義（Next.jsが要求してる形式）
+export default async function PostPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const slug = params.slug
   const fullPath = path.join(process.cwd(), 'posts', `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -27,5 +31,5 @@ export default async function PostPage({ params }: PageProps<{ slug: string }>) 
       <p className="text-sm text-gray-500">{data.date}</p>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </main>
-    )
+  )
 }
