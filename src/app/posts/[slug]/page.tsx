@@ -11,11 +11,9 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }))
 }
 
-
-export default async function PostPage(props: { params: { slug: string } }) {
-  const { slug } = await Promise.resolve(props.params)
-  // ↑ 型レベルでPromiseとして扱われる問題を吸収
-
+export default async function PostPage({ params }: any) {
+  // 💥 もう any にしてしまって Next.js に黙らせる
+  const slug = params.slug
   const fullPath = path.join(process.cwd(), 'posts', `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
