@@ -5,20 +5,18 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 import { getAllPosts } from '@/lib/posts'
+import type { PageProps } from 'next'  // ✅ ← 型補強で型ミス防止
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
   return posts.map((post) => ({ slug: post.slug }))
 }
 
-type Props = {
-  params: { slug: string }
-}
-
-export default async function PostPage(props: Props) {
-  const { slug } = await Promise.resolve(props.params) // ★ここが大事
+export default async function PostPage({ params }: PageProps<{ slug: string }>) {
+  const slug = params.slug
   const fullPath = path.join(process.cwd(), 'posts', `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
+
   const { data, content } = matter(fileContents)
   const processedContent = await remark().use(html).process(content)
   const contentHtml = processedContent.toString()
@@ -29,5 +27,3 @@ export default async function PostPage(props: Props) {
       <p className="text-sm text-gray-500">{data.date}</p>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </main>
-  )
-}
