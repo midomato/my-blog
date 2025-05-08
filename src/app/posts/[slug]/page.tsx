@@ -27,3 +27,5 @@ export default async function PostPage({ params }: PageProps<{ slug: string }>) 
       <p className="text-sm text-gray-500">{data.date}</p>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </main>
+    )
+}
