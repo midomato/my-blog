@@ -22,7 +22,7 @@ export default async function PostPage({ params }: any) {
   const contentHtml = processedContent.toString()
 
   return (
-    <main className="prose mx-auto p-4">
+    <main className="prose prose-x1 mx-auto p-4">
       <h1>{data.title}</h1>
       <p className="text-sm text-gray-500">{data.date}</p>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
