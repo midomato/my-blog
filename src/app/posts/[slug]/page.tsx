@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function PostPage({ params }: any) {
-  const slug = params.slug
+  const {slug} = await params
   const fullPath = path.join(process.cwd(), 'posts', `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -22,10 +22,10 @@ export default async function PostPage({ params }: any) {
   const contentHtml = processedContent.toString()
 
   return (
-    <main className="prose prose-x1 mx-auto p-4">
-      <h1>{data.title}</h1>
-      <p className="text-sm text-gray-500">{data.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+    <main className="prose prose-2xl mx-auto p-4">
+      <h1 className="text-5xl font-bold mt-12 mb-4">{data.title}</h1>
+      <p className="text-sm text-gray-500 mb-8">{data.date}</p>
+      <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </main>
   )
 }
