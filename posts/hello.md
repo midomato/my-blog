@@ -7,8 +7,10 @@ date: "2025-05-08"
 # どうもみどまとです
 ## どうみどまとでででででで
 
-このサイト実はNext.jsという言語で、Vercelというサービスを使って動いています。
+このサイト実はNext.jsという言語で、<span style="color: red;">Vercel</span>というサービスを使って動いています。
 
+
+<span class="text-green-markdown">これは緑の文字だよ</span>
 - markdown対応しているから、こんなこともできちゃう
 - なんでリストにならないの？
 
@@ -16,8 +18,11 @@ date: "2025-05-08"
 
 こんな感じで今度から**ガチの技術宝庫**として書いて行きます。
 
+![ここに画像があるはず](/images/channels4_profile.jpg)
+![qiitaの画像](/images/qiita.png)
+
 それでは！
 
-```txt
-helloworld!
+```python
+print('HelloWorld!')
 ```
