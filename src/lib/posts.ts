@@ -9,6 +9,7 @@ export type PostMeta = {
   title: string
   date: string
   slug: string
+  tag?: string[]
 }
 
 export function getAllPosts(): PostMeta[] {
@@ -24,6 +25,7 @@ export function getAllPosts(): PostMeta[] {
       title: data.title,
       date: data.date,
       slug,
+      tag:data.tag || [],
     }
   }).sort((a, b) => (a.date > b.date ? -1 : 1)) // 新しい順
 }

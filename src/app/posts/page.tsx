@@ -15,6 +15,23 @@ export default async function PostListPage() {
               <h2 className="text-xl font-semibold">{post.title}</h2>
               <p className="text-sm text-gray-500">{post.date}</p>
             </Link>
+            <div className="flex gap-10 text-sm text-gray-400 mt-0.5">
+              {post.tag?.map((tag: string) => (
+                <span
+                  key={tag}
+                  style={{
+                  marginRight: '8px',
+                  padding: '4px 8px',
+                  backgroundColor: '#2f4f4f',
+                  borderRadius: '8px',
+                  fontSize: '0.875rem',
+                  color: '#eee',
+                  }}
+                  >
+                    {tag}
+                  </span>
+              ))}
+            </div>
           </li>
         ))}
       </ul>

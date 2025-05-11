@@ -34,6 +34,27 @@ export default async function PostPage({ params }: any) {
     <main className="prose prose-2xl mx-auto p-4">
       <h1 className="text-5xl font-bold mt-12 mb-4">{data.title}</h1>
       <p className="text-sm text-gray-500 mb-8">{data.date}</p>
+
+      {data.tag && (
+        <div className="flox flox-wrap gap=2 mt-2 mb-8">
+          {data.tag.map((t: string) => (
+            <span
+              key={t}
+              className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full shadow-sm"
+              style={{
+                  marginRight: '8px',
+                  padding: '4px 8px',
+                  backgroundColor: '#2f4f4f',
+                  borderRadius: '8px',
+                  fontSize: '0.875rem',
+                  color: '#eee',
+                  }}
+              >
+                {t}
+              </span>
+          ))}
+        </div>
+      )}
       <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </main>
   )
