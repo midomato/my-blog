@@ -3,7 +3,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
+import remarkRehype from 'remark-rehype'
+import rehyperHighlight from 'rehype-highlight'
+import rehyperStringify from 'rehype-stringify'
 import html from 'remark-html'
+import rehypeRaw from 'rehype-raw'
 import { getAllPosts } from '@/lib/posts'
 
 export async function generateStaticParams() {
@@ -18,7 +22,12 @@ export default async function PostPage({ params }: any) {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   const { data, content } = matter(fileContents)
-  const processedContent = await remark().use(html, { sanitize: false }).process(content)
+  const processedContent = await remark()
+    .use(remarkRehype, { allowDangerousHtml: true})
+    .use(rehypeRaw)
+    .use(rehyperHighlight)
+    .use(rehyperStringify)
+    .process(content)
   const contentHtml = processedContent.toString()
 
   return (
