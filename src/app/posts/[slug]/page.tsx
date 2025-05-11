@@ -6,7 +6,7 @@ import { remark } from 'remark'
 import remarkRehype from 'remark-rehype'
 import rehyperHighlight from 'rehype-highlight'
 import rehyperStringify from 'rehype-stringify'
-import html from 'remark-html'
+//import html from 'remark-html'
 import rehypeRaw from 'rehype-raw'
 import { getAllPosts } from '@/lib/posts'
 
