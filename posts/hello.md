@@ -1,29 +1,29 @@
 ---
-title: "今日から技術ブログを本格的に始めます。"
+title: "I'm starting a tech blog today!"
 date: "2025/05/08"
 tag: ["Vercel","Next.js"]
 ---
 ___
 
-これは最初のMarkdown記事です。
-# どうもみどまとです
-## どうみどまとでででででで
+This is your first Markdown article.
+# Hello, I'm Midomato.
+## Hello I ammmm Midomato.
 
-このサイト実はNext.jsという言語で、<span style="color: red;">Vercel</span>というサービスを使って動いています。
+This site is actually written in a language called Next.js and runs on a service called <span style="color: red;">Vercel</span>.
 
 
-<span class="text-green-markdown">これは緑の文字だよ</span>
-- markdown対応しているから、こんなこともできちゃう
-- なんでリストにならないの？
+<span class="text-green-markdown">This is green text.</span>
+- It supports markdown, so you can do things like this.
+- Why isn't it on the list?
 
-***でも機能が多すぎて何がどうなるのか分からない***
+***But there are too many features and I don't know what to do.***
 
-こんな感じで今度から**ガチの技術宝庫**として書いて行きます。
+From now on, I will write like this, as a **real technical treasure trove.**
 
 ![ここに画像があるはず](/images/channels4_profile.jpg)
 ![qiitaの画像](/images/qiita.png)
 
-それでは！
+Good bye~!
 
 ```python
 print('HelloWorld!')

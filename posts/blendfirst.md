@@ -1,7 +1,7 @@
 ---
 title: "Blenderで何か作ってみた"
 date: "2025/05/12"
-tag: [Blender]
+tag: ["Blender"]
 ---
 ___
 
