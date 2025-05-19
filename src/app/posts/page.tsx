@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 
 export default async function PostListPage() {
-  const posts = getAllPosts()
+  const posts = await getAllPosts()
 
   return (
     <main className="post-list-page max-w-3xl mx-auto px-4 py-8">
@@ -17,8 +17,8 @@ export default async function PostListPage() {
             </Link>
             <div className="flex gap-10 text-sm text-gray-400 mt-0.5">
               {post.tag?.map((tag: string) => (
+                <Link href={`/tags/${tag}`} key={tag}>
                 <span
-                  key={tag}
                   style={{
                   marginRight: '8px',
                   padding: '4px 8px',
@@ -30,6 +30,7 @@ export default async function PostListPage() {
                   >
                     {tag}
                   </span>
+                  </Link>
               ))}
             </div>
           </li>

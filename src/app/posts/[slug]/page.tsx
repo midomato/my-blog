@@ -1,5 +1,5 @@
-
 import fs from 'fs'
+import Link from 'next/link'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function PostPage({ params }: any) {
-  const {slug} = await params
+  const {slug} = params
   const fullPath = path.join(process.cwd(), 'posts', `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -36,10 +36,10 @@ export default async function PostPage({ params }: any) {
       <p className="text-sm text-gray-500 mb-8">{data.date}</p>
 
       {data.tag && (
-        <div className="flox flox-wrap gap=2 mt-2 mb-8">
-          {data.tag.map((t: string) => (
+        <div className="flex flex-wrap gap-2 mt-2 mb-8">
+          {data.tag.map((tag: string) => (
+            <Link href={`/tags/${tag}`} key={tag}>
             <span
-              key={t}
               className="bg-gray-200 text-gray-700 text-sm px-3 py-1 rounded-full shadow-sm"
               style={{
                   marginRight: '8px',
@@ -50,8 +50,9 @@ export default async function PostPage({ params }: any) {
                   color: '#eee',
                   }}
               >
-                {t}
+                {tag}
               </span>
+              </Link>
           ))}
         </div>
       )}

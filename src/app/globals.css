@@ -51,7 +51,7 @@ body {
 }
 
 a {
-  color: var(--foreground);
+   color: var(--foreground);
 }
 
 a:hover {
