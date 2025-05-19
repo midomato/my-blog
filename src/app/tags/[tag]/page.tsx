@@ -15,12 +15,13 @@ export default async function TagFilteredPage({ params }: Props) {
     post.tag?.some(tag => slugify(tag) === slugify(decodedTag))
   )
 
+  const originalTagName =
     allPosts.flatMap(post => post.tag || []).find(tag => slugify(tag) === slugify(decodedTag))
     || decodedTag
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
-      <h1 className="text-red-500 text-6xl font-bold bg-black">タグ: {decodedTag}</h1>
+      <h1 className="text-red-500 text-6xl font-bold bg-black">タグ: {originalTagName}</h1>
       <ul className="space-y-4">
         {filteredPosts.map(post => (
           <li key={post.slug}>
