@@ -15,7 +15,6 @@ export default async function TagFilteredPage({ params }: Props) {
     post.tag?.some(tag => slugify(tag) === slugify(decodedTag))
   )
 
-  const originalTagName =
     allPosts.flatMap(post => post.tag || []).find(tag => slugify(tag) === slugify(decodedTag))
     || decodedTag
 
