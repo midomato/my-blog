@@ -4,7 +4,8 @@ import { getAllPosts } from '@/lib/posts'
 import { slugify } from '@/lib/slugify'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function TagFilteredPage({ params }: any) {
+export default async function TagFilteredPage(props: any) {
+  const params = await props.params;
   const tag = params?.tag ?? ''
   const decodedTag = decodeURIComponent(tag)
 

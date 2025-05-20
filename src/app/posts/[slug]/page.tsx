@@ -16,7 +16,8 @@ export async function generateStaticParams() {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function PostPage({ params }: any) {
+export default async function PostPage(props: any) {
+  const params = await props.params;
   const {slug} = params
   const fullPath = path.join(process.cwd(), 'posts', `${slug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
