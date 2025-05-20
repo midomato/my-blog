@@ -118,9 +118,9 @@ code.language-diff .deletion {
 }
 
 pre {
-  max-width: 80vw;
+  max-width: 100%;
   width: 100%;
-  margin: 2rem 0 2rem 0;
+  margin: 1rem 0 1rem 0;
   overflow-x: auto;
   border-radius: 0.5rem;
   position: relative;
@@ -151,7 +151,6 @@ pre code.language-typescript::before {
   content: "ts";
 }
 
-
 /* ラベルの見た目 */
 pre code::before {
   position: absolute;
@@ -163,4 +162,26 @@ pre code::before {
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   transform: none;
+}
+
+.code-wrapper {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.copy-btn {
+  background: #4b5563;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.code-wrapper pre {
+  overflow-x: auto;
+  padding-top: 0.5rem;
+  position: relative;
 }

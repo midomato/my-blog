@@ -9,6 +9,7 @@ import rehyperStringify from 'rehype-stringify'
 //import html from 'remark-html'
 import rehypeRaw from 'rehype-raw'
 import { getAllPosts } from '@/lib/posts'
+import { CodeCopyButtons } from "@/components/CodeCopyButtons";
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -57,6 +58,7 @@ export default async function PostPage(props: any) {
           ))}
         </div>
       )}
+      <CodeCopyButtons />
       <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </main>
   )
