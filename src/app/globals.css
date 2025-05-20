@@ -92,6 +92,8 @@ a:hover {
 /* 全てのコードブロックに共通の見た目 */
 pre code {
   display: block;
+  min-width: 95%;
+  width: fit-content;
   padding: 1rem;
   background-color: #1e1e1e;
   color: #f8f8f2;
@@ -113,4 +115,41 @@ code.language-diff .hljs-deletion,
 code.language-diff .deletion {
   background-color: #3a0000;
   color: #f92672;
+}
+
+pre {
+  max-width: 80vw;
+  width: 100%;
+  margin: 2rem 0 2rem 0;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  position: relative;
+  padding-top: 15px;
+  text-align: left;
+}
+
+/* ↓ 各言語ごとに疑似ラベルを表示 */
+pre code.language-bash::before {
+  content: "bash";
+}
+
+pre code.language-python::before {
+  content: "python";
+}
+
+pre code.language-cpp::before {
+  content: "cpp";
+}
+
+/* ラベルの見た目 */
+pre code::before {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.4rem;
+  background: #4b5563;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transform: none;
 }

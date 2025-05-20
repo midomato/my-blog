@@ -1,30 +1,20 @@
 ---
-title: "I'm starting a tech blog today!"
+title: "Vercelのデプロイの仕方"
 date: "2025/05/08"
 tag: ["Vercel","Next.js"]
 ---
 ___
 
-This is your first Markdown article.
-# Hello, I'm Midomato.
-## Hello I ammmm Midomato.
-
-This site is actually written in a language called Next.js and runs on a service called <span style="color: red;">Vercel</span>.
-
-
-<span class="text-green-markdown">This is green text.</span>
-- It supports markdown, so you can do things like this.
-- Why isn't it on the list?
-
-***But there are too many features and I don't know what to do.***
-
-From now on, I will write like this, as a **real technical treasure trove.**
-
-![ここに画像があるはず](/images/channels4_profile.jpg)
-![qiitaの画像](/images/qiita.png)
-
-Good bye~!
-
-```python
-print('HelloWorld!')
+<span style="color: purple">[Vercel](https://vercel.com/)</span>とは、<span style="color: purple">[GitHub](https://github.com/)</span>と連携することで**無料**でサイトを公開できるサービス。
+まず、Node.jsとnpmがインストールできているか確認する。
+``` bash
+node -v
+npm -v
+```
+バージョンが表示されていないならまだインストール出来ていないので
+``` python
+print('Hello World!adfafafaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+print(a)
+if a in
+afasdasfasfafdsfsafadfasfaf
 ```
