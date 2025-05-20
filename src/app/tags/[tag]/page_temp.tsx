@@ -3,11 +3,16 @@ export const dynamic = 'force-static'
 import { getAllPosts } from '@/lib/posts'
 import { slugify } from '@/lib/slugify'
 
+export async function generateStaticParams() {
+  const posts = getAllPosts()
+  const tags = posts.flatMap(post => post.tag || [])
+  const uniqueTags = [...new Set(tags.map(tag => slugify(tag)))]
+  return uniqueTags.map(tag => ({ tag }))
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function TagFilteredPage({ params }: any) {
-  const tag = params?.tag ?? ''
-  const decodedTag = decodeURIComponent(tag)
-
+  const decodedTag = await Promise.resolve(decodeURIComponent(params.tag ?? ""))
   const allPosts = getAllPosts()
 
   const filteredPosts = allPosts.filter(post =>
