@@ -132,14 +132,25 @@ pre {
 pre code.language-bash::before {
   content: "bash";
 }
-
+pre code.language-py::before,
 pre code.language-python::before {
   content: "python";
 }
-
 pre code.language-cpp::before {
   content: "cpp";
 }
+pre code.language-diff::before {
+  content: "diff";
+}
+pre code.language-js::before,
+pre code.language-javascript::before {
+  content: "js";
+}
+pre code.language-ts::before,
+pre code.language-typescript::before {
+  content: "ts";
+}
+
 
 /* ラベルの見た目 */
 pre code::before {
