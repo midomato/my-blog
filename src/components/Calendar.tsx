@@ -78,7 +78,7 @@ export const Calendar = () => {
               : isPast
               ? "#dc2626"
               : "#374151",
-            color: isToday ? "#000000" : "#ffffff",
+            color: "#ffffff",
           };
 
           return (
