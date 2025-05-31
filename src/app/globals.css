@@ -150,6 +150,15 @@ pre code.language-ts::before,
 pre code.language-typescript::before {
   content: "ts";
 }
+pre code.language-json::before {
+  content: "json";
+}
+pre code.language-html::before {
+  content: "HTML";
+}
+pre code.language-css::before {
+  content: "css";
+}
 
 /* ラベルの見た目 */
 pre code::before {

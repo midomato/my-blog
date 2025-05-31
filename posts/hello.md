@@ -13,8 +13,5 @@ npm -v
 ```
 バージョンが表示されていないならまだインストール出来ていないので
 ``` python
-print('Hello World!adfafafaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
-print(a)
-if a in
-afasdasfasfafdsfsafadfasfaf
+print('HelloWorld!)
 ```
