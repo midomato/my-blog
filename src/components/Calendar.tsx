@@ -1,12 +1,22 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const Calendar = () => {
-  const today = new Date();
-  const [viewYear, setViewYear] = useState(today.getFullYear());
-  const [viewMonth, setViewMonth] = useState(today.getMonth()); // 0-indexed
+  const [today, setToday] = useState<Date | null>(null);
+  const [viewYear, setViewYear] = useState<number | null>(null);
+  const [viewMonth, setViewMonth] = useState<number | null>(null);
 
-  // 月移動ロジック
+  useEffect(() => {
+    const now = new Date();
+    setToday(now);
+    setViewYear(now.getFullYear());
+    setViewMonth(now.getMonth());
+  }, []);
+
+  if (today === null || viewYear === null || viewMonth === null) {
+    return <div>読み込み中...</div>;
+  }
+
   const changeMonth = (offset: number) => {
     const newDate = new Date(viewYear, viewMonth + offset);
     setViewYear(newDate.getFullYear());
