@@ -13,5 +13,6 @@ npm -v
 ```
 バージョンが表示されていないならまだインストール出来ていないので
 ``` python
-print('HelloWorld!)
+print('hello world!')
 ```
+coming soon..
