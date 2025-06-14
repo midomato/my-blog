@@ -21,6 +21,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
 /* proseの中のspanに対してだけ強制するCSS */
 .prose span.text-green-markdown {
   color: #4ade80 !important;
