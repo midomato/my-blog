@@ -159,6 +159,9 @@ pre code.language-html::before {
 pre code.language-css::before {
   content: "css";
 }
+pre code.language-cs::before {
+  content: "c#";
+}
 
 /* ラベルの見た目 */
 pre code::before {
