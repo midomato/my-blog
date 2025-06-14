@@ -21,7 +21,7 @@ export default async function TagFilteredPage(props: any) {
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
-      <h1 className="text-red-500 text-6xl font-bold bg-black">タグ: {originalTagName}</h1>
+      <h1 className="text-red-500 text-6xl font-bold bg-black">タグ: {originalTagName} <img src={`/tag-icons/${tag}.png`} style={{height : '25px', width: 'auto'}}/></h1>
       <ul className="space-y-4">
         {filteredPosts.map(post => (
           <li key={post.slug}>

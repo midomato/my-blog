@@ -2,9 +2,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
 import 'highlight.js/styles/github-dark.css';
-import { Providers } from "./providers"; // ← 追加
+import Link from 'next/link';
+import Header from "./Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,19 +21,15 @@ export const metadata: Metadata = {
   description: "Midotの技術ブログ",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Providers>
+      <body>
+        <Header/>
+        <main className="max-w-6xl mx-auto px-4 py-8">
           {children}
-        </Providers>
-        <Analytics />
+        </main>
       </body>
     </html>
-  );
+  )
 }

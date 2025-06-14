@@ -1,7 +1,7 @@
 ---
 title: "Unityメモ"
 date: "2025/06/11"
-tag: ["Unity","C#"]
+tag: ["Unity","CS"]
 ---
 ___
 
