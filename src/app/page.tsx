@@ -8,10 +8,10 @@ export default async function PostListPage() {
     <main className="post-list-page max-w-6xl mx-auto px-4 py-8">
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 list-none" style={{padding:0}}>
         {posts.map((post) => (
-          <li key={post.slug} className="bg-[#272B34] rounded-lg p-4 border border-white/10 transform transition-transform duration-200 hover:scale-[1.005]">
+          <li key={post.slug}>
             <Link href={`/posts/${post.slug}`}>
+            <div  className="bg-[#272B34] rounded-lg p-4 border border-white/10 transform transition-transform duration-200 hover:scale-[1.005]">
               <h2 className="text-xl font-semibold">{post.title}</h2>
-              </Link>
               <p className="text-sm text-gray-500">{post.date}</p>
             <div className="flex gap-10 text-sm text-gray-400 mt-0.5">
               {post.tag?.map((tag: string) => (
@@ -25,6 +25,8 @@ export default async function PostListPage() {
                   </Link>
               ))}
             </div>
+            </div>
+            </Link>
           </li>
         ))}
       </ul>

@@ -21,7 +21,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 /* proseの中のspanに対してだけ強制するCSS */
 .prose span.text-green-markdown {
   color: #4ade80 !important;
@@ -74,7 +73,7 @@ a:hover {
 
 /* スクロールバーのつまみ（グリップ部分） */
 ::-webkit-scrollbar-thumb {
-  background-color: #666;  /* ダーク系で自然な色 */
+  background-color: #087e35;  /* ダーク系で自然な色 */
   border-radius: 4px;
 }
 

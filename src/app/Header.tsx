@@ -17,12 +17,12 @@ export default function Header() {
   return (
     <header
       className={`w-full z-50 transition-all duration-300 ${
-        isSticky ? "fixed top-0 bg-[#fff] shadow border-b border-white/10" : "relative bg-transparent"
+        isSticky ? "fixed top-0 bg-[#111] shadow border-b border-white/10" : "relative bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold text-white no-underline">Midot.</Link>
-      </div>
+      <h1 className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <Link href="/" className="text-4xl font-extrabold tracking-tight no-underline">Midot.</Link><img src={`/images/PCplay.gif`} style={{height: "100px"}}/>
+      </h1>
     </header>
   )
 }
