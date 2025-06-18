@@ -45,10 +45,10 @@ export default function PostListPage() {
         <img
           src={post.thumbnail}
           alt={post.title}
-          className="w-full h-40 object-cover"
+          className="w-full aspect-[16/9] object-cover"
         />
       ) : (
-      <div className="w-full h-40 bg-gray-700 flex items-center justify-center text-gray-400 text-sm">
+      <div className="w-full aspect-[16/9] bg-gray-700 flex items-center justify-center text-gray-400 text-sm">
       No Image
       </div>
       )}

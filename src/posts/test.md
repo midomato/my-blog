@@ -5,3 +5,5 @@ thumbnail: "/thumbnails/test.png"
 ---
 
 これはテスト記事です。
+
+# kore
