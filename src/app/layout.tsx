@@ -12,10 +12,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const metadataBase = new URL("https://midomato.com"); //ドメイン変えるならこれも変える
+
 export const metadata: Metadata = {
   title: "Midot.の技術倉庫",
   description: "Midomatoがつくってきた知識を保管する場所。",
-  metadataBase: new URL("https://midomato.com"),
+  
+    openGraph: {
+    title: "Midot.の技術倉庫",
+    description: "Midomatoがつくってきた知識を保管する場所。",
+    images: [
+      {
+        url: new URL("/main/test.jpeg", metadataBase),
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
