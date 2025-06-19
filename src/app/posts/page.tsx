@@ -60,7 +60,7 @@ export default function PostListPage() {
       </div>
       )}
       <div className="p-4 flex flex-col justify-between h-[160px]">
-        <h2 className="text-xl font-semibold break-words mb-4 line-clamp-2">{post.title}</h2>
+        <h2 className="text-xl font-semibold break-words mb-4 line-clamp-3">{post.title}</h2>
         <p className="text-gray-400 text-sm mt-auto">{post.date}</p>
       </div>
     </Link>

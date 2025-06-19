@@ -1,5 +1,5 @@
 ---
-title: "Obsidianの使い方"
+title: "【初心者向け】Obsidianの使い方"
 date: "2025/05/16"
 tag: ["Obsidian","markdown"]
 ---

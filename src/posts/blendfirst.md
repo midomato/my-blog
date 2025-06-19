@@ -1,6 +1,6 @@
 ---
-title: "Blenderで何か作ってみた"
-date: "2025/05/12"
+title: "【初心者】Blenderで何か作ってみた"
+date: "2025-05-12"
 tag: ["Blender"]
 ---
 ___

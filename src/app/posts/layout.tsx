@@ -1,6 +1,6 @@
 export default function PostLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col lg:flex-row px-4 lg:px-8 py-6 gap-6">
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col lg:flex-row px-4 lg:px-2 py-6 gap-6">
       <main className="flex-1">{children}</main>
 
       <aside className="w-70 bg-gray-800 p-4 rounded-lg sticky top-8 h-fit">

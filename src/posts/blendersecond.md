@@ -1,5 +1,5 @@
 ---
-title: "Blenderのアニメーションが重いなと感じた方へ"
+title: "【初心者】Blenderのアニメーションが重いなと感じた方へ"
 date: "2025/05/13"
 tag: ["Blender"]
 ---

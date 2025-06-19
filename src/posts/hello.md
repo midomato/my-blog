@@ -1,6 +1,6 @@
 ---
 title: "Vercelのデプロイの仕方"
-date: "2025/05/08"
+date: "2025-05-08"
 tag: ["vercel","Next.js"]
 ---
 ___

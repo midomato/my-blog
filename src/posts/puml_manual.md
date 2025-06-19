@@ -1,6 +1,6 @@
 ---
-title: "PlantUMLの使い方"
-date: "2025/05/13"
+title: "【初心者向け】PlantUMLの使い方【徹底解説】"
+date: "2025-05-13"
 tag: ["PlantUML","puml","UML"]
 ---
 ___

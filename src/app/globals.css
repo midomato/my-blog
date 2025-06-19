@@ -28,6 +28,29 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* スクロールバー全体のスタイル */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* スクロールバーのトラック（白い背景部分） */
+::-webkit-scrollbar-track {
+  background: transparent; /* ← ここが白いなら透明にする！ */
+}
+
+/* スクロールバーのつまみ（グリップ部分） */
+::-webkit-scrollbar-thumb {
+  background-color: #093d30;  /* ダーク系で自然な色 */
+  border-radius: 4px;
+}
+
+/* ホバー時などに明るくする場合 */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #14aa7d;
+}
+
+
 /* proseがブログ記事内部の処理 */
 .prose {
   max-width: 100%;
@@ -98,6 +121,7 @@ body {
 
 .prose a {
   color: purple;
+  font-weight: bold;
 }
 
 .prose a:hover {
