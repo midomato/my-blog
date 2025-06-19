@@ -5,7 +5,7 @@ import { markdownToHtml } from "@/lib/markdownToHtml";
 
 // ✅ SEOメタデータ
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const { slug } = await params;
+  const slug = params.slug;
 
   const filePath = path.join(process.cwd(), "src/posts", `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf8");
@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 
 // ✅ 実際のページ表示
-export default async function PostPage({ params }: { params:Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function PostPage({ params }: { params: { slug: string} }) {
+  const slug = params.slug;
 
   const filePath = path.join(process.cwd(), "src/posts", `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf8");
