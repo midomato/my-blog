@@ -5,7 +5,7 @@ tag: ["PlantUML","puml","UML"]
 ---
 ___
 
-# <span style="color: rgb(59, 151, 266)">PlantUMLとは</span>
+# PlantUMLとは
 
 > PlantUMLは、テキストベースのユーザーフレンドリーなモデリングツールで、
 
