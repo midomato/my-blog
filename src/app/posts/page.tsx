@@ -16,19 +16,26 @@ type Post = {
 function getAllPosts(): Post[] {
   const files = fs.readdirSync(postsDir);
 
-  return files.map((filename) => {
-    const filePath = path.join(postsDir, filename);
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    const { data } = matter(fileContent);
+  return files
+    .map((filename) => {
+      const filePath = path.join(postsDir, filename);
+      const fileContent = fs.readFileSync(filePath, "utf-8");
+      const { data } = matter(fileContent);
 
-    return {
-      slug: filename.replace(/\.md$/, ""),
-      title: data.title || filename,
-      date: data.date || "",
-      thumbnail: data.thumbnail || "",
-    };
-  });
+      return {
+        slug: filename.replace(/\.md$/, ""),
+        title: data.title || filename,
+        date: data.date || "",
+        thumbnail: data.thumbnail || "",
+      };
+    })
+    .sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return dateB - dateA; // 新しい順
+    });
 }
+
 
 export default function PostListPage() {
   const posts = getAllPosts();
@@ -52,7 +59,7 @@ export default function PostListPage() {
       No Image
       </div>
       )}
-      <div className="p-4 flex-1 flex flex-col justify-between">
+      <div className="p-4 flex flex-col justify-between h-[160px]">
         <h2 className="text-xl font-semibold break-words mb-4 line-clamp-2">{post.title}</h2>
         <p className="text-gray-400 text-sm mt-auto">{post.date}</p>
       </div>
