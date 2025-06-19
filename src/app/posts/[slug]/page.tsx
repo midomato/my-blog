@@ -24,7 +24,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
  return (
     <div className="flex flex-col lg:flex-row gap-6 px-4 py-6">
       {/* 左側：目次（ToC） */}
-      <aside className="hidden lg:block w-64 sticky top-8 max-h-[calc(100vh-4rem)] overflow-y-auto">
+      <aside className="hidden lg:block w-64 bg-[#FDFDFD] dark:bg-[#1E2939] rounded-xl sticky top-8 max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <h2 className="font-bold px-4">目次</h2>
         <TableOfContents toc={toc} />
       </aside>
 
