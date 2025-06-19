@@ -19,7 +19,7 @@ export default function TableOfContents({ toc }: { toc: TocItem[] }) {
             className={`
               absolute -left-3 top-1.5 w-3 h-3
               rounded-full border-2
-              ${item.depth === 1 ? 'bg-black border-pink-500' : 'bg-black border-lime-400'}
+              ${item.depth === 1 ? 'bg-gray-500 border-pink-500' : 'bg-gray-300 border-lime-400'}
             `}
           />
           {item.text}
