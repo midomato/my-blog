@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Midomatoがつくってきた知識を保管する場所。",
     images: [
       {
-        url: new URL("/main/test.jpeg", metadataBase),
+        url: new URL("/main/test.jpg", metadataBase),
         width: 1200,
         height: 630,
       },
