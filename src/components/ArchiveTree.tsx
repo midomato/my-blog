@@ -34,7 +34,7 @@ export default function ArchiveTree({ archive }: ArchiveTreeProps) {
 
   return (
     <div className="text-sm text-gray-300 mt-4">
-      <h2 className="text-lg font-bold mb-2">アーカイブ🗃️</h2>
+      <h2 className="text-lg font-bold mb-2">アーカイブ</h2>
       <ul>
         {Object.entries(archive)
           .sort((a, b) => Number(b[0]) - Number(a[0])) // 新しい年が上

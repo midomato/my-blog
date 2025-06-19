@@ -36,7 +36,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           <img
             src={data.thumbnail}
             alt={data.title}
-            className="mb-4 w-full max-w-2xl aspect-[16/9] object-cover rounded-xl"
+            className="mb-4 w-full max-w-3xl aspect-[16/9] object-cover rounded-xl mx-auto"
           />
         )}
         <div

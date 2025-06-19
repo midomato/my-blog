@@ -1,9 +1,9 @@
 ---
 title: "【初心者】Blenderで何か作ってみた"
 date: "2025-05-12"
+thumbnail: "/thumbnails/blenderplac.png"
 tag: ["Blender"]
 ---
-___
 
 最近、<span style="color: orange">blender</span>を全然触ってなかったのでリハビリがてら作ってみた。
 

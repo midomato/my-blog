@@ -1,9 +1,9 @@
 ---
 title: "【勉強】自分流ノートの取り方"
 date: "2025-06-01"
+thumbnail: "/thumbnails/studynote.jpeg"
 tag: ["study"]
 ---
-___
 
 プログラミングにはノートとか取らないけど、資格勉強はノート取る派です。
 
