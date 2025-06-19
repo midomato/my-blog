@@ -46,7 +46,7 @@ export default function PostListPage() {
     <Link
       key={post.slug}
       href={`/posts/${post.slug}`}
-      className="bg-[#1d1f24] rounded-lg overflow-hidden border border-white/10 hover:scale-[1.02] transition-transform"
+      className="dark:bg-[#1d1f24] bg-white rounded-lg overflow-hidden border border-white/10 hover:scale-[1.02] transition-transform"
     >
       {post.thumbnail ? (
         <img

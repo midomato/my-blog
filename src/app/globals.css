@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #F2F2F2;
   --foreground: #333;
 }
 
@@ -17,8 +17,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #101828;
+    --foreground: #fff;
   }
 }
 
@@ -41,13 +41,13 @@ body {
 
 /* スクロールバーのつまみ（グリップ部分） */
 ::-webkit-scrollbar-thumb {
-  background-color: #093d30;  /* ダーク系で自然な色 */
+  background-color: #14aa7d;  /* ダーク系で自然な色 */
   border-radius: 4px;
 }
 
 /* ホバー時などに明るくする場合 */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #14aa7d;
+  background-color: #093d30;
 }
 
 
@@ -86,7 +86,6 @@ body {
 
 .prose h2 {
   position: relative;
-  color: white;
   font-weight: bold;
   font-size: 1.3rem;
   padding-bottom: 0.5rem;
@@ -126,4 +125,27 @@ body {
 
 .prose a:hover {
   color: greenyellow;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gaming-text {
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #ff9900,
+    #ffff00,
+    #33ff00,
+    #00ffff,
+    #3300ff,
+    #cc00ff
+  );
+  background-size: 1600% 1600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 3s ease infinite;
 }
