@@ -42,7 +42,7 @@ export default function Calendar({ posts }: Props) {
           if (isToday) {
             className += " bg-lime-500 text-black"
           } else if (slug) {
-            className += " bg-yellow-400 text-black"
+            className += " bg-cyan-500 text-white"
           } else if (isPast) {
             className += " bg-red-500 text-white"
           } else {

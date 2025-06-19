@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-5xl font-bold text-red-500">
+      <h1 className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-5xl font-extrabold text-transparent">
         Midot.のホームページただいま改装中...
       </h1>
     </main>
