@@ -23,7 +23,7 @@ export default function Calendar({ posts }: Props) {
 
   return (
     <div className="mt-6">
-      <h2 className="text-lg font-bold mb-2">カレンダー</h2>
+      <h2 className="text-lg font-bold mb-2">カレンダー📅</h2>
       <div className="grid grid-cols-7 gap-1 text-sm text-center">
         {['日', '月', '火', '水', '木', '金', '土'].map((d) => (
           <div key={d} className="font-semibold">{d}</div>
