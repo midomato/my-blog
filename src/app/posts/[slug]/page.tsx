@@ -3,29 +3,56 @@ import path from "path";
 import matter from "gray-matter";
 import { markdownToHtml } from "@/lib/markdownToHtml";
 
-export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+// ✅ SEOメタデータ
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   const { slug } = await params;
 
-  const postsDir = path.join(process.cwd(), "src/posts");
-  const filePath = path.join(postsDir, `${slug}.md`);
+  const filePath = path.join(process.cwd(), "src/posts", `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf8");
+  const { data } = matter(fileContent);
 
+  return {
+    title: data.title || "みどまとのブログ",
+    description: data.description || "記事の内容です",
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      images: data.thumbnail ? [{ url: data.thumbnail }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.title,
+      description: data.description,
+      images: data.thumbnail ? [data.thumbnail] : [],
+    },
+  };
+}
+
+
+// ✅ 実際のページ表示
+export default async function PostPage({ params }: { params:Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  const filePath = path.join(process.cwd(), "src/posts", `${slug}.md`);
+  const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
-
   const htmlContent = await markdownToHtml(content);
 
   return (
     <div className="p-4 text-white">
-        <div className="text-sm text-gray-400 mb-4">{data.date}</div>
-        <h1 className="text-3xl font-bold mb-2">{data.title}</h1>  
-        {data.thumbnail && (
-            <img
-            src={data.thumbnail}
-            alt={data.title}
-            className="mb-4 w-200 aspect-[16/9] object-cover rounded-xl"
-            />
-        )}
-        <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+      <div className="text-sm text-gray-400 mb-4">{data.date}</div>
+      <h1 className="text-3xl font-bold mb-2">{data.title}</h1>
+      {data.thumbnail && (
+        <img
+          src={data.thumbnail}
+          alt={data.title}
+          className="mb-4 w-200 aspect-[16/9] object-cover rounded-xl"
+        />
+      )}
+      <div
+        className="prose prose-invert"
+        dangerouslySetInnerHTML={{ __html: htmlContent }}
+      />
     </div>
   );
 }

@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Midot.の技術倉庫",
   description: "Midomatoがつくってきた知識を保管する場所。",
+  metadataBase: new URL("https://midomato.com"),
 };
 
 export default function RootLayout({
