@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import "@/styles/prism.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,9 @@ const metadataBase = new URL("https://midomato.com"); //ドメイン変えるな
 export const metadata: Metadata = {
   title: "Midot.の技術倉庫",
   description: "Midomatoがつくってきた知識を保管する場所。",
-  
+  other: {
+    'prism-theme': 'https://unpkg.com/prism-themes/themes/prism-one-dark.css'
+  },
     openGraph: {
     title: "Midot.の技術倉庫",
     description: "Midomatoがつくってきた知識を保管する場所。",

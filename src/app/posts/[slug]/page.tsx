@@ -5,6 +5,7 @@ import { markdownToHtml } from "@/lib/markdownToHtml";
 import { generateMetadataFromSlug } from "./seo";
 import { extractTocFromMarkdown } from '@/lib/parseToc'
 import TableOfContents from '@/components/TableOfContents'
+import CodeBlock from "@/components/CodeBlock";
 
 export const generateMetadata = generateMetadataFromSlug;
 
@@ -44,6 +45,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           className="prose prose-invert max-w-none [&_h1]:scroll-mt-24 [&_h2]:scroll-mt-24"
           dangerouslySetInnerHTML={{ __html: htmlContent }}
         ></div>
+        <CodeBlock />
       </article>
     </div>
   );
