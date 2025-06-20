@@ -33,7 +33,7 @@ export default function ArchiveTree({ archive }: ArchiveTreeProps) {
   }
 
   return (
-    <div className="text-sm dark:text-gray-300 mt-4">
+    <div className="text-sm dark:text-wihte mt-4">
       <h2 className="text-lg font-bold mb-2">アーカイブ</h2>
       <ul>
         {Object.entries(archive)

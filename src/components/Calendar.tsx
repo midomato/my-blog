@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, getDay, isSameDay, isBefore } from 'date-fns'
 import Link from 'next/link'
 
@@ -8,7 +9,14 @@ type Props = {
 }
 
 export default function Calendar({ posts }: Props) {
-  const today = new Date()
+  const [today, setToday] = useState<Date | null>(null)
+
+  useEffect(() => {
+    setToday(new Date()) // クライアント側で初期化
+  }, [])
+
+  if (!today) return null // クライアントマウントまで待つ
+
   const start = startOfMonth(today)
   const end = endOfMonth(today)
   const days = eachDayOfInterval({ start, end })
