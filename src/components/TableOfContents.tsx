@@ -8,17 +8,16 @@ type TocItem = {
 
 export default function TableOfContents({ toc }: { toc: TocItem[] }) {
   return (
-    <nav className="relative pl-6 border-l-2 border-purple-500 text-sm">
+    <nav className="relative pl-6 border-l-2 border-purple-500 text-sm space-y-2">
       {toc.map(item => (
         <a
           key={item.id}
           href={`#${item.id}`}
-          className={`block relative mb-3 ml-${item.depth === 2 ? '4' : '0'}`}
+          className={`flex items-center gap-2 ml-${item.depth === 2 ? '4' : '0'}`}
         >
           <span
             className={`
-              absolute -left-3 top-1.5 w-3 h-3
-              rounded-full border-2
+              w-3 h-3 rounded-full border-2 flex-shrink-0
               ${item.depth === 1 ? 'border-pink-500' : 'border-lime-400'}
             `}
           />
@@ -28,3 +27,4 @@ export default function TableOfContents({ toc }: { toc: TocItem[] }) {
     </nav>
   )
 }
+
