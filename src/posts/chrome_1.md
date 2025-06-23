@@ -1,6 +1,7 @@
 ---
 title: "Chrome拡張機能の作り方① -ひな形編-"
 date: "2025-05-31"
+thumbnail: "/thumbnails/chrome_extensions.webp"
 tag: ["Chrome"]
 ---
 ___
