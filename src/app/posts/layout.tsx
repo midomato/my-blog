@@ -27,8 +27,8 @@ export default function PostLayout({ children }: { children: React.ReactNode }) 
         <div className="mt-6">
           <h2 className="text-lg font-bold mb-2">タグ🏷️</h2>
           <div className="flex flex-wrap gap-2 text-sm">
-            <span className="bg-gray-700 text-white px-2 py-1 rounded">unity</span>
-            <span className="bg-gray-700 text-white px-2 py-1 rounded">blender</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-black dark:text-white px-2 py-1 rounded">unity</span>
+            <span className="bg-gray-200 dark:bg-gray-700 text-black dark:text-white px-2 py-1 rounded">blender</span>
           </div>
         </div>
       </aside>

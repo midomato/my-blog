@@ -4,7 +4,8 @@ date: "2025-05-31"
 thumbnail: "/thumbnails/chrome_extensions.webp"
 tag: ["Chrome"]
 ---
-___
+
+# はじめに
 
 ※<span style="color: purple">[Chrome拡張機能](https://developer.chrome.com/docs/extensions?hl=ja)</span>の公式リファレンスを参考にしています。
 
