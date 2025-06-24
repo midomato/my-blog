@@ -57,8 +57,6 @@ body {
 }
 
 .prose h1 {
-  background-color: #2b2f39;
-  color: white;
   font-weight: bold;
   font-size: 1.5rem;
   padding: 0.75rem 1rem;
@@ -69,6 +67,17 @@ body {
   margin-bottom: 1rem;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #ece1e1; 
+  color: black;
+}
+
+/* ダークモード用 */
+@media (prefers-color-scheme: dark) {
+  .prose h1 {
+    background-color: #2b2f39;
+    color: white;
+  }
 }
 
 /* 擬似的に左帯を中に差し込む */
@@ -150,4 +159,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: rainbow 3s ease infinite;
+}
+
+.prose pre, .prose code {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
 }
