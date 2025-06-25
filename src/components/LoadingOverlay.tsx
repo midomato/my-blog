@@ -12,7 +12,7 @@ export default function LoadingOverlay() {
     setVisible(true);
     const timeout = setTimeout(() => {
       setVisible(false);
-    }, 400); // フェードアウト時間
+    }, 0); // フェードアウト時間
 
     return () => clearTimeout(timeout);
   }, [pathname]);
@@ -26,7 +26,7 @@ export default function LoadingOverlay() {
       <img
         src="/midot.png"
         alt="loading"
-        className="w-40 h-40 object-contain"
+        className="w-70 h-70 object-contain"
       />
     </div>
   );

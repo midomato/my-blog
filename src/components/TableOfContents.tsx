@@ -7,12 +7,22 @@ type TocItem = {
 }
 
 export default function TableOfContents({ toc }: { toc: TocItem[] }) {
+  const handleClick = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+      history.replaceState(null, '', `#${id}`)
+    }
+  }
+
   return (
     <nav className="relative pl-6 border-l-2 border-purple-500 text-sm space-y-2">
       {toc.map(item => (
         <a
           key={item.id}
           href={`#${item.id}`}
+          onClick={handleClick(item.id)}
           className={`flex items-center gap-2 ml-${item.depth === 2 ? '4' : '0'}`}
         >
           <span
@@ -27,4 +37,3 @@ export default function TableOfContents({ toc }: { toc: TocItem[] }) {
     </nav>
   )
 }
-
