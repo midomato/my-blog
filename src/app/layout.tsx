@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
+import LoadingOverlay from "@/components/LoadingOverlay";
 import "./globals.css";
 import "@/styles/prism.css";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <LoadingOverlay />
         {children}
         <Footer />
       </body>
