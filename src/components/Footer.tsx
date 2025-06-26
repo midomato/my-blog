@@ -9,7 +9,7 @@ export default function Footer() {
         <Link href="https://qiita.com/midomato" target="_blank">Qiita</Link>
         <Link href="https://zenn.dev/midomato" target="_blank">Zenn</Link>
         <Link href="https://x.com/botjanaiyoda" target="_blank">X</Link>
-        <Link href="https://atcoder.jp/users/midomato" target="_blank">Atcoder</Link>
+        <Link href="https://github.com/midomato" target="_blank">Github</Link>
       </div>
       <p className="mt-2 text-xs text-gray-600 dark:text-gray-500">
         &copy; 2025 Midomato. All rights reserved.
