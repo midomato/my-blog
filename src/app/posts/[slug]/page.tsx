@@ -6,6 +6,7 @@ import { generateMetadataFromSlug } from "./seo";
 import { extractTocFromMarkdown } from '@/lib/parseToc'
 import TableOfContents from '@/components/TableOfContents'
 import CodeBlock from "@/components/CodeBlock";
+import ShareButtons from "@/components/ShareButton";
 
 export const generateMetadata = generateMetadataFromSlug;
 
@@ -41,6 +42,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             className="mb-4 w-full max-w-3xl aspect-[16/9] object-cover rounded-xl mx-auto"
           />
         )}
+        <ShareButtons />
         <div
           className="prose prose-invert max-w-none [&_h1]:scroll-mt-24 [&_h2]:scroll-mt-24"
           dangerouslySetInnerHTML={{ __html: htmlContent }}
