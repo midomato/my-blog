@@ -136,6 +136,19 @@ body {
   color: #5ff0c4;
 }
 
+.prose img {
+  max-width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* スマホ時だけ幅を小さめに制限（640px以下） */
+@media (max-width: 640px) {
+  .prose img {
+    max-width: 100%;
+  }
+}
 
 /* 404 error */
 @keyframes rainbow {
