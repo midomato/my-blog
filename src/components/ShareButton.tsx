@@ -2,8 +2,9 @@
 
 import { Facebook, Mail, Twitter } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
-export default function ShareButtons() {
+export default function ShareButtons({ tags }: { tags: string[] }) {
   const [shareUrl, setShareUrl] = useState('');
 
   useEffect(() => {
@@ -16,16 +17,18 @@ export default function ShareButtons() {
   return (
     <div className="flex flex-col md:flex-row justify-between items-start mt-4 gap-4 mb-7">
     {/* タグ（左側） */}
-    <div className="flex flex-wrap gap-2">
-        {['unity', 'blender'].map((tag) => (
-        <span
+      <div className="flex flex-wrap gap-2">
+        {(tags || []).map((tag) => (
+          <span
             key={tag}
             className="bg-gray-300 dark:bg-gray-700 text-sm px-3 py-1 rounded-full"
-        >
-            {tag}
-        </span>
+          >
+            <Link href={`/posts/tags/${encodeURIComponent(tag)}`} className="no-underline">
+                {tag}
+            </Link>
+          </span>
         ))}
-    </div>
+      </div>
     {/* シェアボタン(左側) */}
     <div className="flex items-center gap-4">
         {/* Twitter */}

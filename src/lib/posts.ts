@@ -35,6 +35,7 @@ export function getAllPosts(): PostMeta[] {
         title: data.title || filename,
         date: data.date || "",
         thumbnail: data.thumbnail || "",
+        tag: data.tag || [],
       };
     })
     .sort((a, b) => {

@@ -42,7 +42,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             className="mb-4 w-full max-w-3xl aspect-[16/9] object-cover rounded-xl mx-auto"
           />
         )}
-        <ShareButtons />
+        <ShareButtons tags={data.tag || []} />
         <div
           className="prose prose-invert max-w-none [&_h1]:scroll-mt-24 [&_h2]:scroll-mt-24"
           dangerouslySetInnerHTML={{ __html: htmlContent }}

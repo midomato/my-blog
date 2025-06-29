@@ -39,12 +39,16 @@ function getAllPosts(): Post[] {
 }
 
 
-export default function PostListPage() {
+export default async function TagPage({ params }: { params: Promise<{ tag: string }> }) {
   const posts = getAllPosts();
+  const { tag } = await params;
+  const filtered = posts.filter((post) => post.tag.includes(tag));
 
   return (
+    <>
+    <h1 className="text-3xl font-bold"><span className="bg-gray-300 dark:bg-gray-600">{tag}</span> に関連する記事</h1>
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-  {posts.map((post) => (
+  {filtered.map((post) => (
     <Link
       key={post.slug}
       href={`/posts/${post.slug}`}
@@ -68,6 +72,7 @@ export default function PostListPage() {
     </Link>
   ))}
 </div>
-
+</>
   );
 }
+
