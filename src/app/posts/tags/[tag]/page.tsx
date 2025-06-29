@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 // 記事フォルダのパス
 const postsDir = path.join(process.cwd(), "src/posts");
