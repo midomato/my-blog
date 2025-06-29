@@ -21,7 +21,7 @@ export default function ShareButtons({ tags }: { tags: string[] }) {
         {(tags || []).map((tag) => (
           <span
             key={tag}
-            className="bg-gray-300 dark:bg-gray-700 text-sm px-3 py-1 rounded-full"
+            className="bg-gray-300 dark:bg-gray-700 text-sm px-3 py-1 rounded"
           >
             <Link href={`/posts/tags/${encodeURIComponent(tag)}`} className="no-underline">
                 {tag}

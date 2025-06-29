@@ -9,6 +9,7 @@ export type PostMeta = {
   title: string;
   date: string;
   thumbnail: string;
+  tag: string[];
 };
 
 export type ArchiveTree = {
