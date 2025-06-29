@@ -2,6 +2,7 @@ import Calendar from "@/components/Calendar";
 import { getAllPosts, getArchiveTree } from "@/lib/posts";
 import ArchiveTree from "@/components/ArchiveTree";
 import TagList from "@/components/TagList";
+import SearchBar from "@/components/SearchBar";
 
 export default function PostLayout({ children }: { children: React.ReactNode }) {
   const posts = getAllPosts();
@@ -12,11 +13,7 @@ export default function PostLayout({ children }: { children: React.ReactNode }) 
 
       <aside className="w-70 bg-[#fdfdfd] dark:bg-gray-800 p-4 rounded-lg sticky top-8 h-fit">
         {/* 検索 */}
-        <input
-          type="text"
-          placeholder="検索..."
-          className="w-full p-2 mb-4 rounded bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-        />
+        <SearchBar posts={posts} />
 
         {/* アーカイブ */}
         <ArchiveTree archive={archiveTree} />
@@ -26,7 +23,7 @@ export default function PostLayout({ children }: { children: React.ReactNode }) 
 
         {/* タグカテゴリ */} 
         <TagList />
-        
+
       </aside>
     </div>
   );

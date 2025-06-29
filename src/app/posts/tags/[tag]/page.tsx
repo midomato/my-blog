@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 // 記事フォルダのパス
 const postsDir = path.join(process.cwd(), "src/posts");
@@ -46,7 +47,7 @@ export default async function TagPage({ params }: { params: Promise<{ tag: strin
 
   return (
     <>
-    <h1 className="text-3xl font-bold mb-4"><span className="bg-gray-300 dark:bg-gray-600 px-2">{tag}</span> に関連する記事</h1>
+    <h1 className="text-3xl font-bold mb-4"><span className="bg-gray-300 dark:bg-gray-600 px-2 py-1 rounded">{tag}</span> に関連する記事</h1>
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
   {filtered.map((post) => (
     <Link
