@@ -1,6 +1,7 @@
 ---
 title: "【初心者向け】Obsidianの使い方"
 date: "2025-05-16"
+thumbnail: "thumbnails/obsidian.webp"
 tag: ["Obsidian","markdown"]
 ---
 

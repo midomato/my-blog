@@ -4,7 +4,6 @@ date: "2025-05-13"
 tag: ["PlantUML","puml","UML"]
 ---
 
-
 # PlantUMLとは
 
 > PlantUMLは、テキストベースのユーザーフレンドリーなモデリングツールで、
