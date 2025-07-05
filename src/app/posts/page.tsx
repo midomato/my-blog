@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 
-// 記事フォルダのパス
+//記事フォルダのパス
 const postsDir = path.join(process.cwd(), "src/posts");
 
 type Post = {
@@ -34,7 +34,7 @@ function getAllPosts(): Post[] {
     .sort((a, b) => {
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
-      return dateB - dateA; // 新しい順
+      return dateB - dateA; //新しい順にソート
     });
 }
 
