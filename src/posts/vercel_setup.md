@@ -1,7 +1,7 @@
 ---
 title: "【Vercel】とは？Gitのインストールからデプロイの仕方まで徹底解説"
 date: "2025-06-29"
-thumbnail: "/thumbnails/vercel.webp"
+thumbnail: "vercel.webp"
 tag: ["vercel","Next.js","Git"]
 ---
 

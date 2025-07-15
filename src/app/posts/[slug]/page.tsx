@@ -37,7 +37,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <h1 className="text-3xl font-bold mb-2">{data.title}</h1>
         {data.thumbnail && (
           <img
-            src={data.thumbnail}
+            src={
+              data.thumbnail.startsWith("/")
+                ? data.thumbnail
+                : `/thumbnails/${data.thumbnail}`
+            }
             alt={data.title}
             className="mb-4 w-full max-w-3xl aspect-[16/9] object-cover rounded-xl mx-auto"
           />

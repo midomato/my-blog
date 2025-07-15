@@ -1,7 +1,7 @@
 ---
 title: "【下書き】利用規約"
 date: "2025-06-26"
-thumbnail: "/thumbnails/test.png"
+thumbnail: "test.webp"
 tag: ["news"]
 ---
 

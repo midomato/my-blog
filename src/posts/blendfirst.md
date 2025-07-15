@@ -1,7 +1,7 @@
 ---
 title: "【初心者】Blenderで何か作ってみた"
 date: "2025-05-12"
-thumbnail: "/thumbnails/blenderplac.png"
+thumbnail: "blenderplac.webp"
 tag: ["Blender"]
 ---
 

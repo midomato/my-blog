@@ -1,7 +1,7 @@
 ---
 title: "【CAD】Fusionを触ってみて感じたこと"
 date: "2025-06-30"
-thumbnail: "/thumbnails/FusionCup.png"
+thumbnail: "FusionCup.webp"
 tag: ["Fusion"]
 ---
 

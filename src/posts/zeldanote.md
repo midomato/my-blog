@@ -1,7 +1,7 @@
 ---
 title: "【ティアキン】ゼルダの伝説ティアーズオブザキングダムの開発体制を限界まで調べてみた"
 date: "2025-06-21"
-thumbnail: "/thumbnails/zelda_note.webp"
+thumbnail: "zelda_note.webp"
 tag: ["game"]
 ---
 

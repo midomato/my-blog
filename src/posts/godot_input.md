@@ -1,7 +1,7 @@
 ---
 title: "【Godot4.4】InputEventでマウスとキーボードやコントローラーを使えるようにする"
 date: "2025-07-03"
-thumbnail: "/thumbnails/GodotScript.jpg"
+thumbnail: "GodotScript.webp"
 tag: ["Godot"]
 ---
 

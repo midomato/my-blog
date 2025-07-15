@@ -1,7 +1,7 @@
 ---
 title: "【初心者】Blenderのアニメーションが重いなと感じた方へ"
 date: "2025-05-13"
-thumbnail: "/thumbnails/blenderanim.png"
+thumbnail: "blenderanim.webp"
 tag: ["Blender"]
 ---
 

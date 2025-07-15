@@ -1,7 +1,7 @@
 ---
 title: "MidotOS Ver0.0.1のお知らせ"
 date: "2025-07-06"
-thumbnail: "/thumbnails/midot.webp"
+thumbnail: "midot.webp"
 tag: ["MidotOS"]
 ---
 

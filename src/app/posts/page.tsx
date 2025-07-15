@@ -52,7 +52,11 @@ export default function PostListPage() {
     >
       {post.thumbnail ? (
         <img
-          src={post.thumbnail}
+          src={
+              post.thumbnail.startsWith("/")
+                ? post.thumbnail
+                : `/thumbnails/${post.thumbnail}`
+            }
           alt={post.title}
           className="w-full aspect-[16/9] object-cover"
         />
